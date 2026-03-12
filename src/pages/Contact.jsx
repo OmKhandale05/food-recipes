@@ -52,11 +52,11 @@ const Contact = () => {
             </div>
             <div className="flex items-center gap-3 text-gray-700">
                 <PhoneIcon className="w-6 h-6 text-orange-500"/>
-                <span>support@foodrecipes.in</span>
+                <span>+91 1234567898</span>
             </div>
             <div className="flex items-center gap-3 text-gray-700">
                 <MapPinIcon className="w-6 h-6 text-orange-500"/>
-                <span>support@foodrecipes.in</span>
+                <span></span>Hyderabad, India
             </div>
         </div>
       </div>
