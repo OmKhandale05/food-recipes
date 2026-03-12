@@ -3,6 +3,7 @@ import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 import RecipeDetails from "../pages/RecipeDetails";
 import Recipes from "../pages/Recipes";
+import Favorites from "../pages/Favorites";
 
 const AppRouter = () => {
     return ( 
@@ -11,6 +12,8 @@ const AppRouter = () => {
             <Route path="/recipes" element={<Recipes/>}/>
 
             <Route path="/recipes/:id" element={<RecipeDetails/>}/>
+
+            <Route path="/favorites" element={<Favorites/>}/>
 
             <Route path="/contact" element={<Contact/>}/>
         </Routes>
