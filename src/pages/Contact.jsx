@@ -42,19 +42,19 @@ const Contact = () => {
         </form>
       </div>
 
-      <div className="bg-gray-50 shadow-md rounded-xl p-8 text-center space-y-4 mt-5">
-        <h2 className="text-2xl font-semibold mb-2">Contact Information</h2>
+      <div className="bg-gray-50 shadow-md rounded-xl p-8 mt-10">
+        <h2 className="text-2xl font-semibold text-center mb-8">Contact Information</h2>
         
-        <div className="flex justify-center gap-8 mt-4">
-            <div className="flex items-center gap-3 text-gray-700">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="flex flex-col items-center gap-2 text-gray-700">
                 <EnvelopeIcon className="w-6 h-6 text-orange-500"/>
                 <span>support@foodrecipes.in</span>
             </div>
-            <div className="flex items-center gap-3 text-gray-700">
+            <div className="flex flex-col items-center gap-2 text-gray-700">
                 <PhoneIcon className="w-6 h-6 text-orange-500"/>
                 <span>+91 1234567898</span>
             </div>
-            <div className="flex items-center gap-3 text-gray-700">
+            <div className="flex flex-col items-center gap-1 text-gray-700">
                 <MapPinIcon className="w-6 h-6 text-orange-500"/>
                 <span></span>Hyderabad, India
             </div>
