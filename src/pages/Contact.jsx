@@ -3,7 +3,7 @@ const Contact = () => {
   return (
     <section className="max-w-4xl mx-auto py-16 px-6 ">
       <h1 className="text-4xl font-bold  text-center mb-4">Contact Us</h1>
-      <p className="text-grey-600 text-center mb-10 text-lg">
+      <p className="text-gray-600 text-center mb-10 text-lg">
         Feel free to reach out for recipe suggestions or feedback.
       </p>
       <div className="bg-white shadow-md rounded-xl p-8">
