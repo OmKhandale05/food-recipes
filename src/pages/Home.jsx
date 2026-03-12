@@ -9,29 +9,34 @@ const Home = () => {
             title: "Cheese Burger",
             image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
             rating: "4.6",
-            time: "20 min"
+            time: "20 min",
+            category: "Lunch"
         },
         {
             title: "Italian Pizza",
             image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38",
             rating: "4.8",
-            time: "40 min"
+            time: "40 min",
+            category: "Dinner"
         },
         {
             title: "Healthy Salad",
             image: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe",
             rating: "4.3",
-            time: "10 min"
+            time: "10 min",
+            category: "Breakfast"
         },
         {
             title: "Chocolate Cake",
             image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587",
             rating: "4.0",
-            time: "60 min"
+            time: "60 min",
+            category: "Dessert"
         }
     ];
 
     const { search, setSearch, filteredRecipes } = useRecipeSearch(recipes);
+
     return ( 
         <section className="max-w-6xl mx-auto py-16 px-6">
             <h2 className="text-4xl font-bold mb-4 text-center">
