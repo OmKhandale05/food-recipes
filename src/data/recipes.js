@@ -42,7 +42,7 @@ const recipes = [
   {
     id: 6,
     title: "Pancakes",
-    image: "https://images.unsplash.com/photo-1528207776546-365bb710ee93a",
+    image: "https://images.unsplash.com/photo-1612182062633-9ff3b3598e96",
     rating: "4.4",
     time: "15 min",
     category: "Breakfast"

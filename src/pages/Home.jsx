@@ -8,9 +8,9 @@ import useFavorites from "../hooks/useFavorites";
 
 const Home = () => {
 
-
+const featuredRecipes = recipes.slice(0,5);
   const { category, setCategory, filteredByCategory } =
-    useCategoryFilter(recipes);
+    useCategoryFilter(featuredRecipes);
   const { search, setSearch, filteredRecipes } =
     useRecipeSearch(filteredByCategory);
     const { favorites, toggleFavorite} = useFavorites();
