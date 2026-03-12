@@ -36,8 +36,9 @@ const Home = () => {
         }
     ];
 
-    const { search, setSearch, filteredRecipes } = useRecipeSearch(recipes);
+    
     const { category, setCategory, filteredByCategory } = useCategoryFilter(recipes);
+    const { search, setSearch, filteredRecipes } = useRecipeSearch(filteredByCategory);
 
     return ( 
         <section className="max-w-6xl mx-auto py-16 px-6">
