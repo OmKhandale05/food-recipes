@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 
 const useFavorites = () => {
 
-    const [favorites, setFavorites] = useState([]);
+    const [favorites, setFavorites] = useState(() => {
+        return JSON.parse(localStorage.getItem("favorites")) || [];
+    });
 
     useEffect(() => {
         const stored = JSON.parse(localStorage.getItem("favorites")) || [];
