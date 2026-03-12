@@ -3,12 +3,15 @@ import recipes from "../data/recipes";
 import useRecipeSearch from "../hooks/useRecipeSearch";
 import useCategoryFilter from "../hooks/useCategoryFilter";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import useFavorites from "../hooks/useFavorites";
 
 const Recipes = () => {
   const { category, setCategory, filteredByCategory } =
     useCategoryFilter(recipes);
   const { search, setSearch, filteredRecipes } =
     useRecipeSearch(filteredByCategory);
+
+    const {favorites, toggleFavorite} = useFavorites();
 
   return (
     <section className="max-w-6xl mx-auto py-20">
@@ -47,7 +50,7 @@ const Recipes = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredRecipes.map((recipe) => (
-            <RecipeCard key={recipe.id} {...recipe}/>
+            <RecipeCard key={recipe.id} {...recipe} favorites={favorites}toggleFavorite={toggleFavorite}/>
         ))}
       </div>
     </section>

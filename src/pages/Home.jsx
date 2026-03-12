@@ -4,6 +4,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import useCategoryFilter from "../hooks/useCategoryFilter";
 import { Link } from "react-router-dom";
 import recipes from "../data/recipes";
+import useFavorites from "../hooks/useFavorites";
 
 const Home = () => {
 
@@ -12,6 +13,7 @@ const Home = () => {
     useCategoryFilter(recipes);
   const { search, setSearch, filteredRecipes } =
     useRecipeSearch(filteredByCategory);
+    const { favorites, toggleFavorite} = useFavorites();
 
   return (
     <section className="max-w-6xl mx-auto py-16 px-6">
@@ -61,6 +63,8 @@ const Home = () => {
             image={recipe.image}
             rating={recipe.rating}
             time={recipe.time}
+            favorites={favorites}
+            toggleFavorite={toggleFavorite}
           />
         ))}
       </div>
