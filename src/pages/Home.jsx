@@ -24,7 +24,7 @@ const Home = () => {
 
       <h2 className="text-3xl font-bold mb-8 text-center">Popular Recipes</h2>
 
-      <div className="flex item-center border rounded-lg px-3 py-2 mb-10 max-w-md mx-auto">
+      <div className="flex items-center border rounded-lg px-3 py-2 mb-10 max-w-md mx-auto">
         <MagnifyingGlassIcon className="w-5 h-5 text-grey-400" />
         <input
           type="text"
@@ -35,7 +35,7 @@ const Home = () => {
         />
       </div>
 
-      <div className="flex justify-center gap-4 mb-10 flex-warp">
+      <div className="flex justify-center gap-4 mb-10 flex-wrap">
         {["All", "Breakfast", "Lunch", "Dinner", "Dessert"].map((cat) => (
           <button
             key={cat}
@@ -53,9 +53,10 @@ const Home = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredRecipes.map((recipe, index) => (
+        {filteredRecipes.map((recipe) => (
           <RecipeCard
-            key={index}
+            key={recipe.id}
+            id={recipe.id}
             title={recipe.title}
             image={recipe.image}
             rating={recipe.rating}
