@@ -7,7 +7,7 @@ function App() {
   
 
   return (
-    <div>
+    <div className='min-h-screen bg-grey-100'>
       <Navbar/>
       <AppRouter/>
     </div>
