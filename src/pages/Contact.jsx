@@ -1,3 +1,4 @@
+import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/outline";
 const Contact = () => {
   return (
     <section className="max-w-4xl mx-auto py-16 px-6 ">
@@ -43,10 +44,20 @@ const Contact = () => {
 
       <div className="bg-gray-50 shadow-md rounded-xl p-8 text-center space-y-4 mt-5">
         <h2 className="text-2xl font-semibold mb-2">Contact Information</h2>
+        
         <div className="flex justify-center gap-8 mt-4">
-          <p className="text-gray-700">Email: support@foodrecipes.in</p>
-          <p className="text-gray-700">Phone: +91 1234567898</p>
-          <p className="text-gray-700">Location: Hyderabad, India</p>
+            <div className="flex items-center gap-3 text-gray-700">
+                <EnvelopeIcon className="w-6 h-6 text-orange-500"/>
+                <span>support@foodrecipes.in</span>
+            </div>
+            <div className="flex items-center gap-3 text-gray-700">
+                <PhoneIcon className="w-6 h-6 text-orange-500"/>
+                <span>support@foodrecipes.in</span>
+            </div>
+            <div className="flex items-center gap-3 text-gray-700">
+                <MapPinIcon className="w-6 h-6 text-orange-500"/>
+                <span>support@foodrecipes.in</span>
+            </div>
         </div>
       </div>
     </section>
