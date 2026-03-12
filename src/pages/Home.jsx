@@ -1,4 +1,6 @@
 import RecipeCard from "../components/RecipeCard";
+import useRecipeSearch from "../hooks/useRecipeSearch";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 const Home = () => {
 
@@ -28,6 +30,8 @@ const Home = () => {
             time: "60 min"
         }
     ];
+
+    const { search, setSearch, filteredRecipes } = useRecipeSearch(recipes);
     return ( 
         <section className="max-w-6xl mx-auto py-16 px-6">
             <h2 className="text-4xl font-bold mb-4 text-center">
@@ -38,8 +42,19 @@ const Home = () => {
             </p>
 
             <h2 className="text-3xl font-bold mb-8 text-center">Popular Recipes</h2>
+
+            <div className="flex item-center border rounded-lg px-3 py-2 mb-10 max-w-md mx-auto">
+                <MagnifyingGlassIcon className="w-5 h-5 text-grey-400"/>
+                <input
+                type="text"
+                placeholder="Search recipes.."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="ml-2 w-full outline-none"
+                />
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {recipes.map((recipe, index)=>(
+                {filteredRecipes.map((recipe, index)=>(
                     <RecipeCard
                         key={index}
                         title={recipe.title}
