@@ -1,6 +1,7 @@
 import RecipeCard from "../components/RecipeCard";
 import useRecipeSearch from "../hooks/useRecipeSearch";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import useCategoryFilter from "../hooks/useCategoryFilter";
 
 const Home = () => {
 
@@ -36,6 +37,7 @@ const Home = () => {
     ];
 
     const { search, setSearch, filteredRecipes } = useRecipeSearch(recipes);
+    const { category, setCategory, filteredByCategory } = useCategoryFilter(recipes);
 
     return ( 
         <section className="max-w-6xl mx-auto py-16 px-6">
@@ -58,6 +60,23 @@ const Home = () => {
                 className="ml-2 w-full outline-none"
                 />
             </div>
+
+            <div className="flex justify-center gap-4 mb-10 flex-warp">
+                {["All", "Breakfast", "Lunch", "Dinner", "Dessert"].map((cat) => (
+                    <button
+                    key={cat}
+                    onClick = {() => setCategory(cat)}
+                    className={`px-4 py-2 rounded-full border transition
+                    ${category === cat
+                        ? "bg-orange-500 text-white border-orange-500"
+                        : "bg-white text-grey-700 hover:bg-orange-100"
+                    }`}
+                    >
+                        {cat}
+                    </button>
+                ))}
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredRecipes.map((recipe, index)=>(
                     <RecipeCard
