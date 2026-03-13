@@ -31,7 +31,7 @@ const Recipes = () => {
         />
       </div>
 
-      <div className="flex justify-left gap-4 mb-10 flex-wrap">
+      <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-10 ">
         {["All", "Breakfast", "Lunch", "Dinner", "Dessert"].map((cat) => (
           <button
             key={cat}
