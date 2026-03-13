@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const useFavorites = () => {
 
@@ -15,8 +16,10 @@ const useFavorites = () => {
 
         if(favorites.includes(id)){
             updated = favorites.filter((fav) => fav !== id);
+            toast.info("Removed from favorites");
         }else{
             updated = [...favorites, id];
+            toast.success("Added to favorites");
         }
 
         setFavorites(updated);
