@@ -10,14 +10,14 @@ function App() {
   
 
   return (
-    <div className='min-h-screen bg-grey-100 flex flex-col'>
+    <div className='min-h-screen bg-gray-100 flex flex-col'>
       <Navbar/>
       <div className='flex-grow'>
       <AppRouter/>
       </div>
       
       <Footer/>
-      <ToastContainer position='bottom-right' autoClose={2000}/>
+      <ToastContainer position='bottom-right' autoClose={2000} theme="light"/>
     </div>
   )
 }
