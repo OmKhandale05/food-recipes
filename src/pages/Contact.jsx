@@ -1,5 +1,12 @@
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import { toast } from "react-toastify";
 const Contact = () => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    toast.success("Message sent successfully!");
+    e.target.reset();
+  }
   return (
     <section className="max-w-4xl mx-auto py-16 px-6 ">
       <h1 className="text-4xl font-bold  text-center mb-4">Contact Us</h1>
@@ -7,7 +14,7 @@ const Contact = () => {
         Feel free to reach out for recipe suggestions or feedback.
       </p>
       <div className="bg-white shadow-md rounded-xl p-8">
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
             <label className="block text-gray-700 mb-2">Name</label>
             <input
