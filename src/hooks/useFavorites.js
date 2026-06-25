@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
 
 const useFavorites = () => {
@@ -6,10 +6,6 @@ const useFavorites = () => {
     const [favorites, setFavorites] = useState(() => {
         return JSON.parse(localStorage.getItem("favorites")) || [];
     });
-
-    useEffect(() => {
-        const stored = JSON.parse(localStorage.getItem("favorites")) || [];
-    },[] );
 
     const toggleFavorite = (id) => {
         let updated;
